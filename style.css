@@ -1,5 +1,5 @@
 /* 
- * ReNoV Project Page Styles
+ * teto Project Page Styles
  * Semantic CSS Architecture
  */
 
@@ -12,11 +12,11 @@
     --caption-font-size: 1rem;
 
     /* Colors - Brand */
-    --color-primary: #22869A;
+    --color-primary: #5A90BE;
     /* Teal 600 */
-    --color-primary-light: #2dd4bf;
+    --color-primary-light: #b6bddd;
     /* Teal 400 */
-    --color-primary-dark: #22869A;
+    --color-primary-dark: #4D8CBE;
     /* Teal 700 */
     --color-cat3d: #8fdcd4;
 
@@ -93,6 +93,17 @@ p {
     color: var(--color-text-main);
     text-align: left;
     line-height: 1.625;
+}
+/* Custom after 0318 */
+.gradient-text {
+    /* background: linear-gradient(45deg, #002F6C, #0056F5,  #4B7BFF, #A6C2FF); */
+    background: linear-gradient(180deg, #4D8CBE, #72addd, #baf7f4);
+    /* background: linear-gradient(45deg, #0A1A2F, #123B73,  #2A65C9, #7BA2FF); */
+    /* background: linear-gradient(45deg, #251C47, #4D2FA2,  #6A4AE2, #C4B1FF); */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
 }
 
 /* Layout Components */
@@ -294,11 +305,11 @@ p {
     line-height: 1.25;
 }
 
-.hero-title .gradient-text {
+/* .hero-title .gradient-text {
     background: linear-gradient(to right, var(--color-primary), var(--color-primary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
+} */
 
 .hero-video-icon {
     width: 64px;
@@ -560,7 +571,7 @@ p {
     text-align: center;
 }
 
-.img-comp-badge.renov {
+.img-comp-badge.teto {
     right: 1rem;
     background-color: #F8FEFB;
     color: #20879A;
@@ -643,8 +654,8 @@ p {
     color: var(--color-primary-dark);
 }
 
-/* ReNoV Section */
-.renov-layout {
+/* teto Section */
+.teto-layout {
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -653,7 +664,7 @@ p {
 
 
 
-.renov-visual img {
+.teto-visual img {
     width: 100%;
     height: auto;
     object-fit: contain;
@@ -661,7 +672,7 @@ p {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
-.renov-description {
+.teto-description {
     font-size: 1.25rem;
     color: var(--color-text-main);
     display: flex;
@@ -906,7 +917,7 @@ p {
     background-color: var(--color-cat3d);
 }
 
-.bg-renov {
+.bg-teto {
     background-color: var(--color-primary);
 }
 
@@ -1329,4 +1340,45 @@ p {
 .footer p {
     margin: 0;
     color: var(--color-text-muted);
+}
+
+/* Sidebar Groups (expandable sub-items) */
+.sidebar-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-subs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, margin-top 0.3s ease;
+    margin-top: 0;
+}
+
+.sidebar-group.expanded .sidebar-subs {
+    max-height: 400px;
+    margin-top: 1rem;
+}
+
+.sidebar-sub-item .sidebar-dot {
+    width: 7px;
+    height: 7px;
+}
+
+.sidebar-sub-item .sidebar-label {
+    font-size: 0.78rem;
+    font-weight: 500;
+}
+
+@media (max-width: 1280px) {
+    .sidebar-subs {
+        display: none;
+    }
+    .sidebar-group {
+        display: contents;
+    }
 }

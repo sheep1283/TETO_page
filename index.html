@@ -199,34 +199,34 @@
             <div id="sub-motivation" data-subsection class="results-block">
                 <h3 class="analysis-subtitle highlight">Why Real-World Data?</h3>
 
-                <div style="margin: 1rem 0 2rem 0; padding: 1.25rem 1.5rem; background: var(--color-bg-alt); border-left: 3px solid var(--color-primary); border-radius: 0 8px 8px 0;">
-                    <ul style="margin: 0; padding-left: 1.25rem; list-style-type: disc;">
-                        <li style="margin-bottom: 0.5rem; font-size: 1.1rem; line-height: 1.6;">
-                            Synthetic events from interpolated RGB frames oversimplify continuous motion dynamics
-                        </li>
-                        <li style="margin-bottom: 0.5rem; font-size: 1.1rem; line-height: 1.6;">
-                            Synthetic events exhibit periodic artifacts and unrealistic noise statistics
-                        </li>
-                        <li style="margin-bottom: 0.5rem; font-size: 1.1rem; line-height: 1.6;">
-                            Rendering + interpolation + event simulation pipelines are computationally expensive and hard to scale
-                        </li>
-                        <li style="margin-bottom: 0; font-size: 1.1rem; line-height: 1.6;">
-                            The resulting sim-to-real gap limits generalization to real-world dynamic scenes
-                        </li>
-                    </ul>
-                </div>
-
-                <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 1.5rem; margin-bottom: 0.5rem; align-items: center;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 1rem 0 2rem 0; align-items: center;">
+                    <div style="padding: 1.25rem 1.5rem; background: var(--color-bg-alt); border-left: 3px solid var(--color-primary); border-radius: 0 8px 8px 0;">
+                        <ul style="margin: 0; padding-left: 1.25rem; list-style-type: disc;">
+                            <li style="margin-bottom: 0.5rem; font-size: 1.05rem; line-height: 1.6;">
+                                Synthetic events from interpolated RGB frames oversimplify continuous motion dynamics
+                            </li>
+                            <li style="margin-bottom: 0.5rem; font-size: 1.05rem; line-height: 1.6;">
+                                Synthetic events exhibit periodic artifacts and unrealistic noise statistics
+                            </li>
+                            <li style="margin-bottom: 0.5rem; font-size: 1.05rem; line-height: 1.6;">
+                                Rendering + interpolation + event simulation pipelines are computationally expensive and hard to scale
+                            </li>
+                            <li style="margin-bottom: 0; font-size: 1.05rem; line-height: 1.6;">
+                                The resulting sim-to-real gap limits generalization to real-world dynamic scenes
+                            </li>
+                        </ul>
+                    </div>
                     <div class="analysis-image-container">
                         <img src="assets/figures/event_data.png" alt="Training data scale comparison" class="analysis-image">
-                    </div>
-                    <div class="analysis-image-container">
-                        <img src="assets/figures/sim2real.png" alt="Real vs Synthetic event analysis" class="analysis-image">
+                        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0.5rem 0 0 0;">
+                            <sup>&dagger;</sup>concurrent work
+                        </p>
                     </div>
                 </div>
-                <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 0;">
-                    <sup>&dagger;</sup>concurrent work
-                </p>
+
+                <div class="analysis-image-container" style="margin-bottom: 0.5rem;">
+                    <img src="assets/figures/sim2real.png" alt="Real vs Synthetic event analysis" class="analysis-image">
+                </div>
             </div>
 
             <!-- Architecture -->
